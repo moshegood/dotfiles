@@ -52,3 +52,5 @@ set showmatch
 vnoremap < <gv
 vnoremap > >gv
 
+" Show both a status line and a command line
+set laststatus=2 
