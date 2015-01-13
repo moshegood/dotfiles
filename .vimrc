@@ -57,3 +57,7 @@ vnoremap > >gv
 
 " Show both a status line and a command line
 set laststatus=2 
+
+" Special per filetype tab size overrides
+autocmd Filetype html setlocal ts=2 sw=2 expandtab
+autocmd Filetype ruby setlocal ts=2 sw=2 expandtab
