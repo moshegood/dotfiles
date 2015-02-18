@@ -13,6 +13,8 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'kien/ctrlp.vim'
 Plugin 'godlygeek/csapprox'
+Plugin 'tpope/vim-unimpaired'
+Plugin 'tpope/vim-rails'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -61,3 +63,7 @@ set laststatus=2
 " Special per filetype tab size overrides
 autocmd Filetype html setlocal ts=2 sw=2 expandtab
 autocmd Filetype ruby setlocal ts=2 sw=2 expandtab
+autocmd BufNewFile,BufRead *.html.erb set filetype=html
+
+" Open the quick fix window for greps
+autocmd QuickFixCmdPost *grep* cwindow
