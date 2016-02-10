@@ -63,7 +63,15 @@ set laststatus=2
 " Special per filetype tab size overrides
 autocmd Filetype html setlocal ts=2 sw=2 expandtab
 autocmd Filetype ruby setlocal ts=2 sw=2 expandtab
-autocmd BufNewFile,BufRead *.html.erb set filetype=html
+autocmd Filetype javascript setlocal ts=2 sw=2 expandtab
+autocmd BufNewFile,BufRead *.erb set filetype=html
 
 " Open the quick fix window for greps
 autocmd QuickFixCmdPost *grep* cwindow
+
+" Go up until you find my tags file
+" This means that the tag file needs to have FULL PATH names
+set tags=./tags;,tags;
+
+" Ignore trailing whitespace in diffs
+set diffopt+=iwhite

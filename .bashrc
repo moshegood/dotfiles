@@ -80,7 +80,7 @@ if [ -x /usr/bin/dircolors ]; then
     #alias dir='dir --color=auto'
     #alias vdir='vdir --color=auto'
 
-    alias grep='grep --color=auto'
+    alias grep='grep --color=auto --exclude-dir=.git --exclude-dir=doc --exclude=tags'
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
 fi
@@ -119,3 +119,4 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 source ~/.rvm/scripts/rvm
 
 export PATH="$PATH:$HOME/bin" # Add ~/bin to PATH for scripting
+export PATH=~/.rakudobrew/bin:$PATH
