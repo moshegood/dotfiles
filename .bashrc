@@ -118,5 +118,7 @@ fi
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 source ~/.rvm/scripts/rvm
 
-export PATH="$PATH:$HOME/bin" # Add ~/bin to PATH for scripting
+export PATH="$HOME/bin:$PATH" # Add ~/bin to PATH for scripting
 export PATH=~/.rakudobrew/bin:$PATH
+export PATH=~/packages/scala-2.10.6/bin:$PATH
+PATH="/home/mgood/.conscript/bin:$PATH"
