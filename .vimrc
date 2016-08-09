@@ -75,3 +75,6 @@ set tags=./tags;,tags;
 
 " Ignore trailing whitespace in diffs
 set diffopt+=iwhite
+
+" Use the system clipboard for default copy/paste
+set clipboard=unnamedplus
