@@ -122,3 +122,6 @@ export PATH="$HOME/bin:$PATH" # Add ~/bin to PATH for scripting
 export PATH=~/.rakudobrew/bin:$PATH
 export PATH=~/packages/scala-2.10.6/bin:$PATH
 PATH="/home/mgood/.conscript/bin:$PATH"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
