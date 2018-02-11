@@ -125,3 +125,12 @@ PATH="/home/mgood/.conscript/bin:$PATH"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+
+export PATH="$HOME/.go/bin:$PATH" # Add RVM to PATH for scripting
+export GOPATH=~/.go/
+
+export PATH="$PATH:/opt/confluent-4.0.0/bin"
+export PATH="$PATH:$HOME/.local/bin"
+
+# Add kotlin related stuff
+export PATH="$PATH:/opt/kotlinc/bin:/opt/kotlin-native-linux-0.5/bin"
