@@ -15,6 +15,9 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'godlygeek/csapprox'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-surround'
+Plugin 'itchyny/lightline.vim'
+Plugin 'scrooloose/nerdtree'
 Plugin 'fatih/vim-go'
 Plugin 'Shougo/neocomplete.vim'
 Plugin 'leafgarland/typescript-vim'
@@ -59,6 +62,7 @@ set incsearch
 set showmatch
 
 set mouse=a
+set backspace=2 " make backspace work like most other programs
 
 " Don't lose selection when indenting
 vnoremap < <gv
@@ -88,8 +92,18 @@ set diffopt+=iwhite
 " Use the system clipboard for default copy/paste
 set clipboard=unnamedplus
 
+let g:lightline = {
+      \ 'colorscheme': 'one',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'component_function': {
+      \   'gitbranch': 'fugitive#head'
+      \ },
+      \ }
 
-
+"HUGE config for neocomplete
 "Note: This option must be set in .vimrc(_vimrc).  NOT IN .gvimrc(_gvimrc)!
 " Disable AutoComplPop.
 let g:acp_enableAtStartup = 0
