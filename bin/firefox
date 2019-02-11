@@ -1,0 +1,19 @@
+#! /bin/bash
+
+DROPBOX_FOLDER=~/Dropbox/firefox
+FIREFOX_FOLDER=$(ls ~/.mozilla/firefox/ | grep default)
+FILE_LIST="logins.json key4.db"
+
+if [ -d $DROPBOX_FOLDER ]; then
+  for file in $FILE_LIST; do
+    cp -a $DROPBOX_FOLDER/$file $FIREFOX_FOLDER/
+  done
+fi
+/usr/bin/firefox $*
+# /usr/bin/firefox $*
+if [ -d $DROPBOX_FOLDER ]; then
+  for file in $FILE_LIST; do
+    cp -a $FIREFOX_FOLDER/$file $DROPBOX_FOLDER/
+  done
+fi
+
