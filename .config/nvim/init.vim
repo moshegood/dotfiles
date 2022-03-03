@@ -15,10 +15,11 @@ Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-surround'
 Plugin 'itchyny/lightline.vim'
 Plugin 'scrooloose/nerdtree'
-" Plugin 'fatih/vim-go'
+Plugin 'fatih/vim-go'
 Plugin 'Shougo/deoplete.nvim'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'nsf/gocode', {'rtp': 'vim/'}
+Plugin 'jiangmiao/auto-pairs'
 
 " All of your Plugins must be added before the following line
 call vundle#end()
@@ -59,6 +60,7 @@ set laststatus=2
 
 " Special per filetype tab size overrides
 autocmd Filetype html setlocal ts=2 sw=2 expandtab
+autocmd Filetype java setlocal ts=2 sw=2 expandtab
 autocmd Filetype ruby setlocal ts=2 sw=2 expandtab
 autocmd Filetype yaml setlocal ts=2 sw=2 expandtab
 autocmd Filetype javascript setlocal ts=2 sw=2 expandtab
@@ -90,3 +92,10 @@ let g:lightline = {
       \ }
 
 let g:deoplete#enable_at_startup = 1
+
+set nowrap
+
+nmap <F12> <C-]>
+au filetype go inoremap <buffer> . .<C-x><C-o>
+nnoremap fu viwy:Git grep <C-r>"<Enter>
+set completeopt=longest,menuone
