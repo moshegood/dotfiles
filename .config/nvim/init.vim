@@ -10,20 +10,25 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'kien/ctrlp.vim'
 Plugin 'godlygeek/csapprox'
-Plugin 'tpope/vim-unimpaired'
-Plugin 'tpope/vim-rails'
-Plugin 'tpope/vim-surround'
+" Plugin 'tpope/vim-unimpaired'
+" Plugin 'tpope/vim-rails'
+" Plugin 'tpope/vim-surround'
+" Plugin 'thoughtbot/vim-rspec'
 Plugin 'itchyny/lightline.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'fatih/vim-go'
-Plugin 'Shougo/deoplete.nvim'
-Plugin 'leafgarland/typescript-vim'
-Plugin 'nsf/gocode', {'rtp': 'vim/'}
+" Plugin 'Shougo/deoplete.nvim'
+" Plugin 'leafgarland/typescript-vim'
+" Plugin 'nsf/gocode', {'rtp': 'vim/'}
 Plugin 'jiangmiao/auto-pairs'
 
 " All of your Plugins must be added before the following line
 call vundle#end()
 filetype plugin indent on  " allows auto-indenting depending on file type
+
+let g:python3_host_prog='/usr/local/bin/python3'
+let g:python_host_prog='/usr/local/bin/python2'
+let g:rustfmt_autosave = 1
 
 syntax on
 colorscheme desert
@@ -91,11 +96,12 @@ let g:lightline = {
       \ },
       \ }
 
-let g:deoplete#enable_at_startup = 1
+" let g:deoplete#enable_at_startup = 1
 
 set nowrap
 
 nmap <F12> <C-]>
 au filetype go inoremap <buffer> . .<C-x><C-o>
+au filetype go nnoremap gc :GoCallers<Enter>
 nnoremap fu viwy:Git grep <C-r>"<Enter>
 set completeopt=longest,menuone
