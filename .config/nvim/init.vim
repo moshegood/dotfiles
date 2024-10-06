@@ -21,6 +21,9 @@ Plugin 'fatih/vim-go'
 " Plugin 'leafgarland/typescript-vim'
 " Plugin 'nsf/gocode', {'rtp': 'vim/'}
 Plugin 'jiangmiao/auto-pairs'
+" sourcegraph
+Plugin 'nvim-lua/plenary.nvim'
+Plugin 'sourcegraph/sg.nvim', { 'do': 'nvim -l build/init.lua' }
 
 " All of your Plugins must be added before the following line
 call vundle#end()

@@ -37,7 +37,7 @@ fi
 
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
-    xterm-color) color_prompt=yes;;
+    xterm-color|*-256color) color_prompt=yes;;
 esac
 
 # uncomment for a colored prompt, if the terminal has the capability; turned
@@ -89,6 +89,10 @@ fi
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -127,10 +131,10 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
 export PATH="$HOME/.go/bin:$PATH" # Add RVM to PATH for scripting
-export GOPATH=~/.go/
+# export GOPATH=~/.go/
 
-export PATH="$PATH:/opt/confluent-4.0.0/bin"
+# export PATH="$PATH:/opt/confluent-4.0.0/bin"
 export PATH="$PATH:$HOME/.local/bin"
 
 # Add kotlin related stuff
-export PATH="$PATH:/opt/kotlinc/bin:/opt/kotlin-native-linux-0.5/bin"
+# export PATH="$PATH:/opt/kotlinc/bin:/opt/kotlin-native-linux-0.5/bin"
