@@ -7,3 +7,6 @@ alias ij="ENVIRONMENT=development '/Applications/IntelliJ IDEA.app/Contents/MacO
 alias sftp_mailbox="sftp -P 2222 -oHostKeyAlgorithms=+ssh-rsa  -oPubkeyAcceptedAlgorithms=+ssh-rsa -i ~/.ssh/staging.test.user.sftp test-user@sftp-stg.p.sjc1.squareup.com"
 alias fzfjq="echo '' | fzf --preview 'jq {q} < pods.json'"
 alias pr="gh pr create -d"
+alias lpr="lpr -o sides=two-sided-short-edge"
+
+alias cc="ANTHROPIC_BASE_URL=http://macbook.local:11434 ANTHROPIC_AUTH_TOKEN=your-api-key claude --model=qwen3.5"
