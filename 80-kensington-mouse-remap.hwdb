@@ -1,0 +1,7 @@
+# This file should be placed at: /etc/udev/hwdb.d
+# remap buttons on Kensington Slimblade trackball
+evdev:name:Kensington Kensington Slimblade Trackball:*
+ ID_INPUT_KEY=1
+ KEYBOARD_KEY_90002=btn_left
+ KEYBOARD_KEY_ff000001=btn_right
+ KEYBOARD_KEY_ff000002=btn_middle
